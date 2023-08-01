@@ -1,0 +1,12 @@
+services:
+  date:
+    build:
+      dockerfile: date.dockerfile
+  result:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - date
+    env_file:
+      - .env
