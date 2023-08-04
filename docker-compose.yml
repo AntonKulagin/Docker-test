@@ -1,8 +1,10 @@
 services:
   date:
+    image: luckywastaken/result-date
     build:
       dockerfile: date.dockerfile
   result:
+    image: luckywastaken/result
     build: .
     ports:
       - "3000:3000"
